@@ -26,4 +26,8 @@ contract Storage {
     function retrieve() public view returns (uint256){
         return number;
     }
+
+    function double() public {
+        number *= 2;
+    }
 }

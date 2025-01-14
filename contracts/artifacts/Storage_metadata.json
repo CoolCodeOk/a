@@ -7,6 +7,13 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "double",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "retrieve",
 				"outputs": [
 					{
@@ -76,11 +83,11 @@
 	},
 	"sources": {
 		"contracts/1_Storage.sol": {
-			"keccak256": "0xa3de51030e5784d1fc25677298a0bd61bf7eac541ca2fc94232f1b7dc5a89e21",
+			"keccak256": "0x372884f8646b80048d843a231efb8cb04c6a748f05a80dcc860fe4e4bb9789bc",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://aac95d61b7ce356e2da8d93eb66abfabbeadebb4f44d3d78fd14414e7ac918ba",
-				"dweb:/ipfs/QmZ6otiNvDfrWzEiQJBAdWUurwEvsemrbBZgD9hj6qSki1"
+				"bzz-raw://1dc5600c695e5079c7d293231d1ca121bc579444d8bc730bd680be259e811d33",
+				"dweb:/ipfs/QmVxm4MxVt6ZLSnNqzc4BmpkHiepoA4PiDTYfCfjQgsLXT"
 			]
 		}
 	},
