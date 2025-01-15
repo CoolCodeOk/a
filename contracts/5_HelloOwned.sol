@@ -7,10 +7,6 @@ import "hardhat/console.sol";
 contract owned {
     address owner;
     uint a;
-    uint a1;
-    uint a2;
-    uint a3;
-
     
     constructor()  {
         owner = msg.sender;
@@ -42,32 +38,33 @@ contract owned {
 
     // 多修改器，按顺序执行
     modifier mf1 (uint b) {
-        uint c = b;
-        _; // mf2
-        c = a;
-        a = 11;
+        console.log("mf1-A");
+        _;
+        console.log("mf1-B");
     }
 
      modifier mf2 () {
-        a1 = a + 1;
-        _; // mf3
+        console.log("mf2-A");
+        _;
+        console.log("mf2-B");
     }
 
     modifier mf3() {
-        a = 12;
-        a2 = a + 1;
-        return ; // return to mf2，最终到47行
-        _; // 原始函数，执行不到
-        a = 13;
+        console.log("mf3-A");
+        return ;  // 这里return了，因此函数体test1不会被执行
+        _;
+        console.log("mf3-B");
     }
 
-    function get_a() public view returns (uint, uint, uint, uint)   {
-        return (a, a1, a2, a3);
-    }
 
-    // 最后一个mf3负责调用test1函数
+    // 多修改器的调用顺序，每个修改器中，通过 _;将函数体分为两部分，前置逻辑和后置逻辑，称为A和B。
+    // 在 Solidity 中，当一个函数使用多个修改器时，修改器的调用顺序是从左到右。具体过程如下：
+    // 从左到右依次调用修改器的前置逻辑。
+    // 遇到 _;在执行下一个修改器，最后一个修改器赋值执行被修改的函数体。
+    // 每个修改器的 _; 表示函数体的执行位置。
+    // 函数体执行完毕后，从右到左依次调用修改器的后置逻辑。
+
     function test1() public mf1(a) mf2 mf3 {
-        a3 = a + 1;
-        a = 1;
+        console.log("test1");
     }
 }

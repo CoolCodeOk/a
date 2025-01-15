@@ -24,34 +24,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "get_a",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -113,11 +85,11 @@
 	},
 	"sources": {
 		"contracts/5_HelloOwned.sol": {
-			"keccak256": "0x7437fbc426aa86706d2165e26b974ba14c5a07c36a5aac702c32009761657c5b",
+			"keccak256": "0x620b363b1384376b397489ddeb54d4fe3e7506e8b153106e08ae44d0cf4538c9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c95ec273c2276cd2fb2c4655d58c8c831583f4f69ff4ccc7c1e3da1d5bb8c7f0",
-				"dweb:/ipfs/QmWao1d5kbCfkPAngRxJ2rHKaqy67c8fJvwq9vmr1g8bmX"
+				"bzz-raw://383e5fe49b204998f315dcde3c8ce755192fd7c6d54ab9285bea317802f81834",
+				"dweb:/ipfs/QmQfdh2CnkcHkYUG2EeVCPpTcauD5PnHooodMLBYmFWphF"
 			]
 		},
 		"hardhat/console.sol": {
